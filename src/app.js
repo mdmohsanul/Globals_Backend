@@ -43,10 +43,18 @@ app.use(cookieParser());
 // ---------- routes -------------------
 
 import userRouter from "./routes/user.routes.js";
-
+import formRouter from "./routes/form.routes.js";
+import submissionRouter from "./routes/submission.routes.js";
+import encryptionRoutes from "./routes/encryption.route.js";
 
 // routes declaration
 app.use("/api/v1/auth", userRouter);
+app.use("/api/v1/form", formRouter);
+app.use("/api/v1/submission", submissionRouter);
+app.use("/api/v1/encryption", encryptionRoutes);
+
+
+
 
 app.use(errorHandler);
 
