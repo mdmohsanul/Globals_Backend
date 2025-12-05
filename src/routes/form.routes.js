@@ -3,7 +3,6 @@ import {
   getActiveForm,
   getFormById,
   createForm,
-
   deactivateForm,
 } from "../controllers/form.controller.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
