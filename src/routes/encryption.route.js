@@ -1,7 +1,8 @@
 // routes/encryption.routes.js
 import { Router } from "express";
 import fs from "fs";
-import ApiResponse from "../utils/ApiResponse.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+
 
 const router = Router();
 
