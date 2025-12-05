@@ -28,17 +28,20 @@ const generateAccessAndRefreshTokens = async (userId) => {
 
 const accessTokenOptions = {
   httpOnly: true,
-  secure: true,
-  sameSite: "strict",
-  maxAge: 15 * 60 * 1000, // 15 min
+  secure: true, // MUST be true on HTTPS
+  sameSite: "none", // ALLOW cross-site cookie
+  maxAge: 15 * 60 * 1000,
+  path: "/", // recommended
 };
 
 const refreshTokenOptions = {
   httpOnly: true,
   secure: true,
-  sameSite: "strict",
-  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+  sameSite: "none", // MUST be none
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+  path: "/",
 };
+
 
  const registerUser = asyncHandler(async (req, res) => {
   const { userName, email, password } = req.body;
