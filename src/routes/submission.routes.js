@@ -10,7 +10,6 @@ import hybridDecryptPayload from "../middlewares/hybridDecryptPayload.js";
 const router = Router();
 
 router.route("/").post(
-  verifyJWT,
   upload.fields([
     { name: "resume", maxCount: 1 },
     { name: "photo", maxCount: 1 },
@@ -20,7 +19,7 @@ router.route("/").post(
   createSubmission
 );
 
-router.route("/allSubmission").get(verifyJWT, getMySubmissions);
+router.route("/allSubmission").get(getMySubmissions);
 
 
 
