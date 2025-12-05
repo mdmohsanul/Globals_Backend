@@ -5,7 +5,7 @@ import { errorHandler } from "./utils/errorHandler.js";
 
 const app = express();
 const allowedOrigins = [
-  "https://globals-frontend-r8wc.vercel.app/", // Production frontend
+  "https://globals-frontend-r8wc.vercel.app", // Production frontend
   "http://localhost:5173", // Dev frontend
 ];
 
