@@ -20,7 +20,7 @@ router.route("/").post(
   createSubmission
 );
 
-router.route("/allSubmission").get(getMySubmissions);
+router.route("/allSubmission").get(verifyJWT, getMySubmissions);
 
 
 
